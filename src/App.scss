@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Inter:wght@400;500&family=Karla:wght@400;500;700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -32,7 +34,24 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+//////////////////////////////////////////////////////
+
+* {
+  margin: 0; // remove unnecessary gaps
+}
+
+:root {
+  --typeface-karla: 'Karla', sans-serif;
+  --typeface-inconsolata: 'Inconsolata', monospace;
+  --typeface-inter: 'Inter', monospace;
+
+  --backgound-color: #ffe4c4;
+  --main: #ffffffaa;
+}
+
