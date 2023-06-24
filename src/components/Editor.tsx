@@ -62,7 +62,7 @@ export default function Editor() {
           ></div>
         </div>
       </div>
-      <small className="footer"><a href="https://github.com/will-s-205/random-quote-machine" target='_blank' rel="noreferrer">by William Step</a></small>
+      <small className="footer"><a href="https://github.com/will-s-205/markdown-previewer/" target='_blank' rel="noreferrer">by William Step</a></small>
     </div>
   );
 }
