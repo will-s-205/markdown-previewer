@@ -1,14 +1,27 @@
-.textarea-class {
+.editor-wrapper {
     display: flex;
+    flex-direction: column;
     margin: 50px auto;
     width: 600px;
     height: 250px;
     padding: 20px;
-    background-color: var(--backgound-color);
+    background-color: var(--silver);
+}
+
+.editor-header {
+    width: 100%;
+    height: 30px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.textarea{
+    width: 100%;
+    height: 100%;
 }
 
 .markdown-previewer img {
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .markdown-previewer {
@@ -18,5 +31,5 @@
     max-width: 800px;
     border: 1px solid var(--main);
     padding: 20px;
-    background-color: var(--backgound-color);
+    background-color: var(--silver);
 }

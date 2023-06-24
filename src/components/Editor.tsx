@@ -5,6 +5,7 @@ import { marked } from 'marked';
 
 marked.setOptions({
   breaks: true,
+  gfm: true
 });
 
 export default function Editor() {
@@ -33,27 +34,37 @@ export default function Editor() {
 
   return (
     <div>
-      <textarea
-        id="editor"
-        className='textarea-class'
-        value={text.text}
-        placeholder="text here"
-        onChange={handleEdit}
-        name="text"
-      ></textarea>
-
       <div
-        id="preview"
-        className='markdown-previewer'
-        dangerouslySetInnerHTML={createMarkup()}
-        onChange={handleEdit}
-      ></div>
+        id="editor"
+        className='editor-wrapper'>
+        <div className='editor-header'>
+          <h2>Editor</h2>
+        </div>
+        <textarea
+          className='textarea'
+          value={text.text}
+          placeholder="text here"
+          onChange={handleEdit}
+          name="text"
+        ></textarea>
+      </div>
+
+      <div>
+        <div
+          id="preview"
+          className='markdown-previewer'
+          dangerouslySetInnerHTML={createMarkup()}
+          onChange={handleEdit}
+        ></div>
+        <small className="footer"><a href="https://github.com/will-s-205/random-quote-machine" target='_blank' rel="noreferrer">by William Step</a></small>
+      </div>
+      <small className="footer"><a href="https://github.com/will-s-205/random-quote-machine" target='_blank' rel="noreferrer">by William Step</a></small>
     </div>
   );
 }
 
-const placeholder = 
-`
+const placeholder =
+  `
 # Markdown Previewer
 
 Hi, I'm [William](https://github.com/will-s-205), welcome to my Markdown Previewer! 
@@ -62,7 +73,7 @@ The project was built for learning purposes as a part of **Front End Libraries C
 
 You can find the challenge by clicking [here](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
 
-![freeCodeCamp](https://raw.githubusercontent.com/sitek94/pomodoro-clock/master/free-code-camp.png)
+![freeCodeCamp](https://raw.githubusercontent.com/will-s-205/will-s-205.github.io/main/fcc-portfolio/img/fcc-wide-social-banner.png)
 
 ## Marked - Markdown Parser
 [Marked] lets you convert [Markdown] into \`HTML\`.  Markdown is a simple text format whose goal is to be very easy to read and write, even when not converted to HTML.  This demo page will let you type anything you like and see how it gets converted.  Live.  No more waiting around.
