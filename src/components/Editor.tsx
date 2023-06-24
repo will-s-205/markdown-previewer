@@ -4,8 +4,8 @@ import './Editor.scss';
 import { marked } from 'marked';
 
 marked.setOptions({
-  breaks: true,
-  gfm: true
+  gfm: true,
+  breaks: true
 });
 
 export default function Editor() {
@@ -35,12 +35,12 @@ export default function Editor() {
   return (
     <div>
       <div
-        id="editor"
         className='editor-wrapper'>
-        <div className='editor-header'>
+        <div className='header'>
           <h2>Editor</h2>
         </div>
         <textarea
+          id="editor"
           className='textarea'
           value={text.text}
           placeholder="text here"
@@ -50,13 +50,17 @@ export default function Editor() {
       </div>
 
       <div>
-        <div
-          id="preview"
-          className='markdown-previewer'
-          dangerouslySetInnerHTML={createMarkup()}
-          onChange={handleEdit}
-        ></div>
-        <small className="footer"><a href="https://github.com/will-s-205/random-quote-machine" target='_blank' rel="noreferrer">by William Step</a></small>
+        <div className='previewer-wrapper'>
+          <div className='header'>
+            <h2>Previewer</h2>
+          </div>
+          <div
+            id="preview"
+            className='reviewer'
+            dangerouslySetInnerHTML={createMarkup()}
+            onChange={handleEdit}
+          ></div>
+        </div>
       </div>
       <small className="footer"><a href="https://github.com/will-s-205/random-quote-machine" target='_blank' rel="noreferrer">by William Step</a></small>
     </div>
@@ -65,7 +69,7 @@ export default function Editor() {
 
 const placeholder =
   `
-# Markdown Previewer
+# Markdown
 
 Hi, I'm [William](https://github.com/will-s-205), welcome to my Markdown Previewer! 
 
