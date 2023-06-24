@@ -1,13 +1,22 @@
 .textarea-class {
     display: flex;
-    margin: 100px auto;
-    width: 400px;
+    margin: 50px auto;
+    width: 600px;
     height: 250px;
+    padding: 20px;
+    background-color: var(--backgound-color);
+}
+
+.markdown-previewer img {
+    max-width: 800px;
 }
 
 .markdown-previewer {
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
-    max-width: 400px;
+    margin: 50px auto;
+    max-width: 800px;
+    border: 1px solid var(--main);
+    padding: 20px;
+    background-color: var(--backgound-color);
 }
