@@ -1,3 +1,4 @@
+import './App.scss'
 import React from "react"
 import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
